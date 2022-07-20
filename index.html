@@ -192,9 +192,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-07-19 16:35:42 / Modified: 17:50:49" itemprop="dateCreated datePublished" datetime="2022-07-19T16:35:42+08:00">2022-07-19</time>
+      <time title="Created: 2022-07-19 16:35:42" itemprop="dateCreated datePublished" datetime="2022-07-19T16:35:42+08:00">2022-07-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-07-20 09:05:44" itemprop="dateModified" datetime="2022-07-20T09:05:44+08:00">2022-07-20</time>
     </span>
 
   
@@ -207,15 +213,38 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="01-github-Hexo-搭建个人博客"><a href="#01-github-Hexo-搭建个人博客" class="headerlink" title="01 github+Hexo 搭建个人博客"></a>01 github+Hexo 搭建个人博客</h1><h3 id="1、搭建博客所需工具："><a href="#1、搭建博客所需工具：" class="headerlink" title="1、搭建博客所需工具："></a>1、搭建博客所需工具：</h3><p>node.js<br>git</p>
-<p>hexo 下载：npm install hexo-cli -g</p>
-<p>hexo -v</p>
-<h3 id="2、搭建仓库"><a href="#2、搭建仓库" class="headerlink" title="2、搭建仓库"></a>2、搭建仓库</h3><p>将 github 作为博客的服务器<br>在 github 中新建仓库，</p>
+          <h1 id="github-Hexo-搭建个人博客"><a href="#github-Hexo-搭建个人博客" class="headerlink" title="github+Hexo 搭建个人博客"></a>github+Hexo 搭建个人博客</h1><h3 id="1、搭建博客所需工具："><a href="#1、搭建博客所需工具：" class="headerlink" title="1、搭建博客所需工具："></a>1、搭建博客所需工具：</h3><ul>
+<li>node.js</li>
+<li>git</li>
+<li>hexo 下载：npm install hexo-cli -g</li>
+<li>查看版本：</li>
+</ul>
+<p>​ hexo -v</p>
+<p>​ git -v</p>
+<p>​ node -v</p>
+<p>​ npm -v</p>
+<h3 id="2、github-搭建仓库"><a href="#2、github-搭建仓库" class="headerlink" title="2、github 搭建仓库"></a>2、github 搭建仓库</h3><p>将 github 作为博客的服务器，在 github 中新建仓库。</p>
 <h3 id="3、生成-ssh-keys"><a href="#3、生成-ssh-keys" class="headerlink" title="3、生成 ssh keys"></a>3、生成 ssh keys</h3><h3 id="4、本地生成博客内容"><a href="#4、本地生成博客内容" class="headerlink" title="4、本地生成博客内容"></a>4、本地生成博客内容</h3><h3 id="5、发布博客到互联网"><a href="#5、发布博客到互联网" class="headerlink" title="5、发布博客到互联网"></a>5、发布博客到互联网</h3><p>修改 hexo 配置文件<strong>_config.yml</strong>：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/wadeyyy/wadeyyy.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
 
-<h3 id="6、设置-github-开发者-token"><a href="#6、设置-github-开发者-token" class="headerlink" title="6、设置 github 开发者 token"></a>6、设置 github 开发者 token</h3><h1 id="发布到-github"><a href="#发布到-github" class="headerlink" title="发布到 github"></a>发布到 github</h1><p>​ 0、清理缓存<br>​ hexo clean<br>​ 1、安装依赖<br>​ npm install hexo-deployer-git –save<br>​ 2、生成<br>​ hexo g<br>​ 3、上传<br>​ hexo d</p>
-<p>参考链接：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1mU4y1j72n?p=5&amp;share_source=copy_web&amp;vd_source=8b862e0bd314f4bfa2b0c47e744ff720">https://www.bilibili.com/video/BV1mU4y1j72n?p=5&amp;share_source=copy_web&amp;vd_source=8b862e0bd314f4bfa2b0c47e744ff720</a></p>
+<h3 id="6、设置-github-开发者-token，发布"><a href="#6、设置-github-开发者-token，发布" class="headerlink" title="6、设置 github 开发者 token，发布"></a>6、设置 github 开发者 token，发布</h3><h4 id="发布到-github："><a href="#发布到-github：" class="headerlink" title="发布到 github："></a>发布到 github：</h4><ul>
+<li>0、清理缓存</li>
+</ul>
+<p>​ hexo clean</p>
+<ul>
+<li>1、安装依赖</li>
+</ul>
+<p>​ npm install hexo-deployer-git –save</p>
+<ul>
+<li>2、生成</li>
+</ul>
+<p>​ hexo g</p>
+<ul>
+<li><p>3、上传<br>​ hexo d</p>
+</li>
+<li><p><em>参考链接：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1mU4y1j72n?p=5&amp;share_source=copy_web&amp;vd_source=8b862e0bd314f4bfa2b0c47e744ff720">https://www.bilibili.com/video/BV1mU4y1j72n?p=5&amp;share_source=copy_web&amp;vd_source=8b862e0bd314f4bfa2b0c47e744ff720</a></em></p>
+</li>
+</ul>
 
       
     </div>
